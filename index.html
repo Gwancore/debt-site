@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Alpha Recovery Solutions - Professional Debt Collection Services</title>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- FontAwesome Icons CDN -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<!-- JSON-LD Structured Data for SEO -->
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Alpha Recovery Solutions",
+        "description": "Professional B2B debt collection services with zero upfront costs",
+        "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=500&fit=crop",
+        "telephone": "+442071838000",
+        "email": "hello@alpharecovery.co.uk",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "123 Business Plaza",
+            "addressLocality": "London",
+            "postalCode": "SW1A 1AA",
+            "addressCountry": "GB"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "ratingCount": "480"
+        },
+        "priceRange": "£0-£0",
+        "sameAs": ["https://www.facebook.com/", "https://www.linkedin.com/", "https://www.twitter.com/"]
+    }
+    </script>
+<style>
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1e3a8a;
+            border-radius: 4px;
+        }
+
+        /* Mobile menu checkbox state */
+        #menu-toggle:checked ~ #mobile-menu {
+            display: block;
+        }
+
+        /* Testimonial slider animations */
+        @keyframes fadeInOut {
+            0%, 100% { opacity: 0; }
+            10%, 90% { opacity: 1; }
+        }
+
+        .testimonial-item {
+            animation: fadeInOut 12s infinite;
+        }
+
+        .testimonial-item.active {
+            animation: none;
+            opacity: 1;
+        }
+
+        /* Scroll animations */
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .scroll-animate {
+            opacity: 0;
+            animation: slideInUp 0.6s ease-out forwards;
+        }
+
+        /* Floating button */
+        .floating-cta {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+            z-index: 40;
+        }
+
+        .floating-cta:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+        }
+
+        /* Input error state */
+        input.error,
+        textarea.error {
+            border-color: #ef4444 !important;
+            background-color: #fef2f2;
+        }
+
+        .error-message {
+            color: #dc2626;
+            font-size: 0.875rem;
+            margin-top: 0.25rem;
+        }
+
+        /* Form loading state */
+        button:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+        }
+
+        /* Reusable utilities */
+        .form-input {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 2px solid #cbd5e1;
+            border-radius: 0.5rem;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .form-input:focus {
+            border-color: #1e3a8a;
+        }
+
+        .nav-link {
+            color: #374151;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #1e3a8a;
+        }
+
+        .footer-link {
+            color: #d1d5db;
+            transition: color 0.3s ease;
+        }
+
+        .footer-link:hover {
+            color: #ffffff;
+        }
+
+        .service-card {
+            background: white;
+            border: 2px solid #e5e7eb;
+            border-radius: 0.75rem;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            border-color: #22c55e;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-icon {
+            width: 4rem;
+            height: 4rem;
+            background: #1e3a8a;
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .rating-star {
+            color: #4ade80;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-white">
+<!-- Header / Navigation -->
+<header class="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm">
+<nav class="container mx-auto px-4 md:px-6 py-4 flex items-center justify-between">
+<!-- Logo -->
+<div class="flex items-center gap-2"><a class="flex items-center gap-2" href="index.html">
+<div class="w-10 h-10 bg-blue-900 rounded-lg flex items-center justify-center text-white font-bold text-lg">
+                    AR
+                </div>
+<span class="text-xl font-bold text-blue-900 hidden sm:inline">Alpha Recovery</span>
+</a></div>
+<!-- Desktop Navigation Menu -->
+<div class="hidden md:flex items-center gap-8"><a class="nav-link" href="index.html">Home</a>
+<a class="nav-link" href="services.html">Services</a>
+<a class="nav-link" href="how-it-works.html">How It Works</a>
+<a class="nav-link" href="testimonials.html">Testimonials</a>
+<a class="nav-link" href="contact.html">Contact</a>
+</div>
+<!-- Mobile Menu Toggle -->
+<input class="hidden" id="menu-toggle" type="checkbox"/>
+<label class="md:hidden cursor-pointer text-blue-900 text-2xl" for="menu-toggle">
+<i class="fas fa-bars"></i>
+</label>
+<!-- Primary CTA Button -->
+<a class="hidden md:inline-block bg-green-500 text-white px-6 py-2 rounded-lg font-semibold hover:bg-green-600 transition transform hover:scale-105" href="contact.html">
+<i class="fas fa-paper-plane mr-2"></i>Submit a Debt
+            </a>
+</nav>
+<!-- Mobile Menu (Hidden by default) -->
+<div class="hidden md:hidden bg-gray-50 border-t border-gray-200 px-4 py-4" id="mobile-menu"><a class="block py-2 nav-link" href="index.html">Home</a>
+<a class="block py-2 nav-link" href="services.html">Services</a>
+<a class="block py-2 nav-link" href="how-it-works.html">How It Works</a>
+<a class="block py-2 nav-link" href="testimonials.html">Testimonials</a>
+<a class="block py-2 nav-link" href="contact.html">Contact</a>
+<a class="block mt-4 bg-green-500 text-white px-4 py-2 rounded-lg font-semibold hover:bg-green-600 transition text-center" href="contact.html">
+<i class="fas fa-paper-plane mr-2"></i>Submit a Debt
+            </a>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative bg-gradient-to-br from-blue-900 to-slate-600 text-white py-20 md:py-32 overflow-hidden">
+<!-- Background decoration -->
+<div class="absolute top-0 right-0 w-96 h-96 bg-green-500 opacity-5 rounded-full -mr-48 -mt-48 blur-3xl"></div>
+<div class="container mx-auto px-4 md:px-6 relative z-10">
+<div class="grid md:grid-cols-2 gap-12 items-center">
+<!-- Left: Text content -->
+<div>
+<h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                            Recover Your Unpaid Invoices with Zero Upfront Cost
+                        </h1>
+<p class="text-lg md:text-xl text-gray-200 mb-8 leading-relaxed">
+                            Professional B2B debt collection using late payment legislation to ensure you get paid faster. Let us handle the recovery while you focus on your business.
+                        </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="bg-green-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-600 transition transform hover:scale-105 flex items-center justify-center gap-2" href="contact.html">
+<i class="fas fa-bolt"></i>Submit Your Debt Now
+                            </a>
+<a class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition flex items-center justify-center gap-2" href="how-it-works.html">
+<i class="fas fa-info-circle"></i>Learn More
+                            </a>
+</div>
+</div>
+<!-- Right: Image -->
+<div class="hidden md:block">
+<img alt="Business meeting" class="rounded-lg shadow-2xl" src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&amp;h=500&amp;fit=crop"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Stats Row -->
+<section class="bg-gray-50 py-16 md:py-20">
+<div class="container mx-auto px-4 md:px-6">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Stat 1 -->
+<div class="text-center">
+<div class="text-4xl md:text-5xl font-bold text-green-500 mb-2">
+                            £2.5M+
+                        </div>
+<p class="text-gray-700 text-lg font-semibold">Recovered</p>
+<p class="text-gray-600 text-sm">On behalf of our clients</p>
+</div>
+<!-- Stat 2 -->
+<div class="text-center">
+<div class="text-4xl md:text-5xl font-bold text-blue-900 mb-2">
+                            94%
+                        </div>
+<p class="text-gray-700 text-lg font-semibold">Success Rate</p>
+<p class="text-gray-600 text-sm">In debt recovery outcomes</p>
+</div>
+<!-- Stat 3 -->
+<div class="text-center">
+<div class="text-4xl md:text-5xl font-bold text-slate-600 mb-2">
+                            24hr
+                        </div>
+<p class="text-gray-700 text-lg font-semibold">Response Time</p>
+<p class="text-gray-600 text-sm">Initial case assessment</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<!-- How It Works Section -->
+<!-- Trust Section with Testimonials -->
+<!-- Contact / Lead Form Section -->
+<!-- Footer -->
+<footer class="bg-blue-900 text-gray-200 py-12 md:py-16">
+<div class="container mx-auto px-4 md:px-6">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+<!-- Company Info -->
+<div>
+<h4 class="text-white font-bold text-lg mb-4 flex items-center gap-2">
+<div class="w-8 h-8 bg-green-500 rounded flex items-center justify-center text-sm font-bold">AR</div>
+                            Alpha Recovery
+                        </h4>
+<p class="text-gray-300 text-sm mb-4">
+                            Professional debt recovery services helping businesses recover unpaid invoices.
+                        </p>
+<div class="flex gap-4">
+<a aria-label="Facebook" class="footer-link" href="#">
+<i class="fab fa-facebook-f"></i>
+</a>
+<a aria-label="LinkedIn" class="footer-link" href="#">
+<i class="fab fa-linkedin-in"></i>
+</a>
+<a aria-label="Twitter" class="footer-link" href="#">
+<i class="fab fa-twitter"></i>
+</a>
+</div>
+</div>
+<!-- Quick Links -->
+<div>
+<h5 class="text-white font-bold mb-4">Quick Links</h5>
+<ul class="space-y-2 text-sm">
+<li><a class="footer-link" href="#services">Services</a></li>
+<li><a class="footer-link" href="how-it-works.html">How It Works</a></li>
+<li><a class="footer-link" href="#testimonials">Testimonials</a></li>
+<li><a class="footer-link" href="contact.html">Contact</a></li>
+</ul>
+</div>
+<!-- Legal -->
+<div>
+<h5 class="text-white font-bold mb-4">Legal</h5>
+<ul class="space-y-2 text-sm">
+<li><a class="footer-link" href="#">Privacy Policy</a></li>
+<li><a class="footer-link" href="#">Terms &amp; Conditions</a></li>
+<li><a class="footer-link" href="#">Cookie Policy</a></li>
+<li><a class="footer-link" href="#">Compliance</a></li>
+</ul>
+</div>
+<!-- Contact Info -->
+<div>
+<h5 class="text-white font-bold mb-4">Contact Us</h5>
+<ul class="space-y-3 text-sm">
+<li class="flex items-start gap-3">
+<i class="fas fa-map-marker-alt text-green-500 mt-1 flex-shrink-0"></i>
+<span class="text-gray-300">123 Business Plaza<br/>London, UK<br/>SW1A 1AA</span>
+</li>
+<li class="flex items-center gap-3">
+<i class="fas fa-phone text-green-500 flex-shrink-0"></i>
+<a class="text-gray-300 hover:text-white transition" href="tel:+442071838000">+44 (0)20 7183 8000</a>
+</li>
+<li class="flex items-center gap-3">
+<i class="fas fa-envelope text-green-500 flex-shrink-0"></i>
+<a class="text-gray-300 hover:text-white transition" href="mailto:hello@alpharecovery.co.uk">hello@alpharecovery.co.uk</a>
+</li>
+</ul>
+</div>
+</div>
+<!-- Divider -->
+<div class="border-t border-blue-800 pt-8">
+<div class="flex flex-col md:flex-row items-center justify-between">
+<p class="text-gray-400 text-sm mb-4 md:mb-0">
+                            © 2026 Alpha Recovery Solutions. All rights reserved.
+                        </p>
+<div class="flex items-center gap-4 text-sm text-gray-400">
+<div class="flex items-center gap-2">
+<i class="fas fa-certificate text-green-500"></i>
+<span>FCA Regulated</span>
+</div>
+<div class="flex items-center gap-2">
+<i class="fas fa-certificate text-green-500"></i>
+<span>ISO 9001 Certified</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</footer>
+</main>
+<!-- Floating Action Button -->
+<a aria-label="Contact us on WhatsApp" class="floating-cta bg-green-500 text-white hover:bg-green-600" href="https://wa.me/442071838000?text=Hello%20Alpha%20Recovery,%20I%20need%20help%20with%20debt%20recovery" rel="noopener noreferrer" target="_blank">
+<i class="fab fa-whatsapp"></i>
+</a>
+<!-- JavaScript -->
+<script>
+        // Configuration constants
+        const CONFIG = {
+            AUTO_ROTATE_INTERVAL: 8000,
+            FORM_SUBMIT_DELAY: 1200,
+            FORM_RESET_DELAY: 5000,
+            SCROLL_ANIMATION_THRESHOLD: 0.1,
+            ANIMATION_DELAY_UNIT: 0.1
+        };
+
+        // Testimonial slider - properly scoped
+        const createTestimonialSlider = () => {
+            const buttons = document.querySelectorAll('.testimonial-btn');
+            const items = document.querySelectorAll('.testimonial-item');
+            let current = 0;
+            let autoRotateTimer = null;
+
+            if (!buttons.length || !items.length) return { cleanup: () => {} };
+
+            const update = (index) => {
+                items.forEach((item, i) => {
+                    if (i === index) {
+                        item.classList.add('active');
+                        item.style.display = 'block';
+                        item.style.opacity = '1';
+                    } else {
+                        item.classList.remove('active');
+                        item.style.display = 'none';
+                        item.style.opacity = '0';
+                    }
+                });
+
+                buttons.forEach((btn, i) => {
+                    btn.classList.toggle('bg-white', i === index);
+                    btn.classList.toggle('bg-gray-400', i !== index);
+                    btn.setAttribute('aria-selected', i === index);
+                });
+
+                current = index;
+                clearTimeout(autoRotateTimer);
+                startAutoRotate();
+            };
+
+            const startAutoRotate = () => {
+                autoRotateTimer = setInterval(() => {
+                    update((current + 1) % items.length);
+                }, CONFIG.AUTO_ROTATE_INTERVAL);
+            };
+
+            const handleKeyboard = (e) => {
+                if (e.key === 'ArrowRight') {
+                    update((current + 1) % items.length);
+                } else if (e.key === 'ArrowLeft') {
+                    update((current - 1 + items.length) % items.length);
+                }
+            };
+
+            buttons.forEach((btn, i) => {
+                btn.addEventListener('click', () => update(i));
+                btn.setAttribute('role', 'tab');
+                btn.setAttribute('aria-label', `Testimonial ${i + 1}`);
+                btn.setAttribute('aria-selected', i === 0);
+            });
+
+            document.addEventListener('keydown', handleKeyboard);
+            startAutoRotate();
+
+            return {
+                cleanup: () => {
+                    clearInterval(autoRotateTimer);
+                    document.removeEventListener('keydown', handleKeyboard);
+                    buttons.forEach((btn) => {
+                        btn.replaceWith(btn.cloneNode(true));
+                    });
+                }
+            };
+        };
+
+        // Scroll animations with efficient index caching
+        const initScrollAnimations = () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const index = entry.target.dataset.animIndex ||
+                                    Array.from(entry.target.parentElement.children).indexOf(entry.target);
+                        entry.target.style.animationDelay = `${index * CONFIG.ANIMATION_DELAY_UNIT}s`;
+                        entry.target.classList.add('scroll-animate');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: CONFIG.SCROLL_ANIMATION_THRESHOLD });
+
+            document.querySelectorAll('#services .grid > div, #how-it-works .grid > div:not(.hidden)').forEach((el, i) => {
+                el.dataset.animIndex = i;
+                observer.observe(el);
+            });
+
+            return observer;
+        };
+
+        // Form handling with proper cleanup
+        const initFormHandler = () => {
+            const form = document.getElementById('lead-form');
+            const successMsg = document.getElementById('success-message');
+            const submitBtn = document.getElementById('submit-btn');
+            const btnText = document.getElementById('btn-text');
+
+            if (!form) return { cleanup: () => {} };
+
+            const fields = form.querySelectorAll('input[required], textarea[required]');
+            let submitTimeout = null;
+            let resetTimeout = null;
+
+            const validateField = (field) => {
+                const value = field.value.trim();
+                const errorEl = form.querySelector(`.error-message[data-field="${field.name}"]`);
+                let valid = !!value;
+                let msg = '';
+
+                if (!valid) {
+                    msg = 'This field is required';
+                } else if (field.type === 'email' && !field.value.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
+                    valid = false;
+                    msg = 'Please enter a valid email address';
+                } else if (field.type === 'number' && field.value < 0) {
+                    valid = false;
+                    msg = 'Debt amount must be positive';
+                }
+
+                field.classList.toggle('error', !valid);
+                errorEl.textContent = msg;
+                errorEl.classList.toggle('hidden', valid);
+
+                return valid;
+            };
+
+            const attachFieldValidation = () => {
+                fields.forEach(field => {
+                    field.addEventListener('blur', () => validateField(field));
+                    field.addEventListener('input', () => {
+                        if (field.classList.contains('error')) validateField(field);
+                    });
+                });
+            };
+
+            const handleSubmit = (e) => {
+                e.preventDefault();
+
+                let allValid = true;
+                fields.forEach(field => {
+                    if (!validateField(field)) allValid = false;
+                });
+
+                if (!allValid) return;
+
+                submitBtn.disabled = true;
+                btnText.textContent = 'Submitting...';
+
+                submitTimeout = setTimeout(() => {
+                    form.style.display = 'none';
+                    successMsg.classList.remove('hidden');
+                    form.reset();
+                    fields.forEach(f => f.classList.remove('error'));
+
+                    resetTimeout = setTimeout(() => {
+                        form.style.display = 'block';
+                        successMsg.classList.add('hidden');
+                        submitBtn.disabled = false;
+                        btnText.textContent = 'Submit Your Debt for Free Assessment';
+                    }, CONFIG.FORM_RESET_DELAY);
+                }, CONFIG.FORM_SUBMIT_DELAY);
+            };
+
+            form.addEventListener('submit', handleSubmit);
+            attachFieldValidation();
+
+            return {
+                cleanup: () => {
+                    clearTimeout(submitTimeout);
+                    clearTimeout(resetTimeout);
+                    form.removeEventListener('submit', handleSubmit);
+                }
+            };
+        };
+
+        // Delegated event handler for smooth scroll (single listener instead of 15+)
+        const initSmoothScroll = () => {
+            const handleSmoothScroll = (e) => {
+                const anchor = e.target.closest('a[href^="#"]:not(.floating-cta)');
+                if (!anchor) return;
+
+                e.preventDefault();
+                const target = document.querySelector(anchor.getAttribute('href'));
+                if (!target) return;
+
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+                const menuToggle = document.getElementById('menu-toggle');
+                if (menuToggle?.checked) menuToggle.checked = false;
+            };
+
+            document.addEventListener('click', handleSmoothScroll);
+
+            return {
+                cleanup: () => document.removeEventListener('click', handleSmoothScroll)
+            };
+        };
+
+        // Initialize all components
+        let componentCleanup = [];
+
+        document.addEventListener('DOMContentLoaded', () => {
+            initScrollAnimations();
+            componentCleanup.push(createTestimonialSlider());
+            componentCleanup.push(initFormHandler());
+            componentCleanup.push(initSmoothScroll());
+        });
+
+        // Cleanup on page unload
+        window.addEventListener('beforeunload', () => {
+            componentCleanup.forEach(comp => comp?.cleanup?.());
+        });
+    </script>
+</body>
+</html>
