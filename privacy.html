@@ -241,163 +241,34 @@
             </a>
 </div>
 </header>
-<main><section class="bg-gradient-to-r from-orange-50 to-amber-50 py-16 md:py-24 relative overflow-hidden" id="contact"><div class="decorative-blob absolute -top-24 -right-24 w-96 h-96 bg-amber-400 opacity-10 rounded-full blur-3xl pointer-events-none"></div><div class="decorative-blob absolute -bottom-24 -left-24 w-72 h-72 bg-orange-400 opacity-10 rounded-full blur-3xl pointer-events-none"></div>
-<div class="container mx-auto px-4 md:px-6">
-<div class="max-w-2xl mx-auto">
-<div class="text-center mb-12">
-<h2 class="text-3xl md:text-4xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-neutral-800 to-amber-900/90 drop-shadow-sm">Submit Your Debt</h2>
-<p class="text-neutral-600 text-lg">
-                            Tell us about your case. We'll respond within 24 hours with a free assessment and recovery plan.
-                        </p>
-</div>
-<form class="bg-white border border-neutral-200 rounded-2xl p-8 md:p-10 shadow hover:shadow-xl hover:-translate-y-1 hover:border-amber-400 transition-all duration-300 relative overflow-hidden group" id="lead-form" novalidate="">
-<!-- Company Name -->
-<div class="mb-6">
-<label class="block text-slate-900 font-semibold mb-2" for="company-name">
-<i class="fas fa-building mr-2 text-neutral-900"></i>Company Name *
-                            </label>
-<input aria-describedby="error-company-name" aria-label="Company Name" aria-required="true" class="form-input" id="company-name" name="company-name" placeholder="Your company name" required="" type="text"/>
-<div class="error-message hidden" data-field="company-name" id="error-company-name"></div>
-</div>
-<!-- Email -->
-<div class="mb-6">
-<label class="block text-slate-900 font-semibold mb-2" for="email">
-<i class="fas fa-envelope mr-2 text-neutral-900"></i>Email Address *
-                            </label>
-<input aria-describedby="error-email" aria-label="Email Address" aria-required="true" class="form-input" id="email" name="email" placeholder="your@company.com" required="" type="email"/>
-<div class="error-message hidden" data-field="email" id="error-email"></div>
-</div>
-<!-- Debt Amount -->
-<div class="mb-6">
-<label class="block text-slate-900 font-semibold mb-2" for="debt-amount">
-<i class="fas fa-coins mr-2 text-neutral-900"></i>Debt Amount (R) *
-                            </label>
-<input aria-describedby="error-debt-amount" aria-label="Debt Amount" aria-required="true" class="form-input" id="debt-amount" min="0" name="debt-amount" placeholder="e.g., 5000" required="" step="0.01" type="number"/>
-<div class="error-message hidden" data-field="debt-amount" id="error-debt-amount"></div>
-</div>
-<!-- Message -->
-<div class="mb-8">
-<label class="block text-slate-900 font-semibold mb-2" for="message">
-<i class="fas fa-message mr-2 text-neutral-900"></i>Case Details / Message *
-                            </label>
-<textarea aria-describedby="error-message" aria-label="Case Details" aria-required="true" class="form-input resize-none" id="message" name="message" placeholder="Tell us about the debt, debtor, and any previous collection attempts..." required="" rows="5"></textarea>
-<div class="error-message hidden" data-field="message" id="error-message"></div>
-</div>
-<!-- Privacy Notice -->
-<div class="border border-neutral-200 rounded-lg p-4 mb-8 bg-gradient-to-b from-orange-50 to-orange-100">
-<p class="text-sm text-slate-700">
-<i class="fas fa-lock text-amber-500 mr-2"></i>
-                                Your information is secure and encrypted. We comply with GDPR and will only use your details to assess your case and contact you regarding recovery services.
-                            </p>
-</div>
-<!-- Submit Button -->
-<button aria-label="Submit Your Debt for Free Assessment" class="w-full text-white px-6 py-3 rounded-lg font-bold text-lg hover:shadow-lg transition transform hover:scale-105 flex items-center justify-center gap-2 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-orange-600 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-amber-600" id="submit-btn" type="submit">
-<i class="fas fa-paper-plane"></i><span id="btn-text">Submit Your Debt for Free Assessment</span>
-</button>
-</form>
-<!-- Success Message (Hidden by default) -->
-<div class="hidden bg-emerald-50 border border-amber-500 rounded-xl p-8 mt-8 text-center" id="success-message">
-<h3 class="text-2xl font-bold text-emerald-700 mb-2">
-<i class="fas fa-check-circle mr-2"></i>Thank You!
-                        </h3>
-<p class="text-slate-700">
-                            Your debt has been submitted successfully. Our team will review your case and contact you within 24 hours with a free assessment.
-                        </p>
-</div>
-</div>
-</div>
+<main>
+<section class="relative py-24 md:py-32 bg-gradient-to-b from-orange-50 to-orange-100 overflow-hidden min-h-screen">
+    <div class="decorative-blob absolute -top-24 -right-24 w-96 h-96 bg-amber-400 opacity-10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="decorative-blob absolute -bottom-24 -left-24 w-72 h-72 bg-orange-400 opacity-10 rounded-full blur-3xl pointer-events-none"></div>
+    
+    <div class="container mx-auto px-4 md:px-6 max-w-4xl relative z-10">
+        <div class="bg-white p-8 md:p-12 rounded-xl shadow hover:shadow-xl hover:-translate-y-1 hover:border-amber-400 border border-neutral-200 transition-all duration-300 relative overflow-hidden group">
+            <h1 class="text-3xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-neutral-800 to-amber-900/90 drop-shadow-sm mb-6">Privacy Policy</h1>
+            
+            <div class="prose max-w-none text-slate-700 space-y-5">
+                <p class="text-sm font-bold text-amber-600 uppercase tracking-widest mb-8 border-b border-gray-100 pb-4">Effective Date: March 2026</p>
+                
+                <div class="bg-amber-50 border-l-4 border-amber-500 p-4 mb-8 rounded-r">
+                    <p class="text-sm text-amber-900 m-0"><strong>Note:</strong> This is a placeholder for your official <em>Privacy Policy</em>. Please consult with legal counsel to replace this text with your formal documentation to ensure full compliance with South African laws (e.g. POPIA) and international standards.</p>
+                </div>
+
+                <h2 class="text-2xl font-bold text-neutral-800 mt-8 mb-4">1. General Information</h2>
+                <p>Welcome to Alpha Recovery Solutions. Transparency, compliance, and ethical debt collection practices are the cornerstone of our business operations. This document outlines the rules, procedures, and responsibilities concerning your rights and our services.</p>
+                
+                <h2 class="text-2xl font-bold text-neutral-800 mt-8 mb-4">2. Commitment to Security</h2>
+                <p>We take your privacy and data security seriously. All personal and financial data is handled strictly natively and carefully safeguarded adhering to leading compliance regulations.</p>
+
+                <h2 class="text-2xl font-bold text-neutral-800 mt-8 mb-4">3. Contact Us</h2>
+                <p>If you have any questions or require further clarification regarding this document, please contact our compliance team directly at <a href="mailto:hello@alpharecovery.co.za" class="text-amber-600 font-semibold hover:underline">hello@alpharecovery.co.za</a>.</p>
+            </div>
+        </div>
+    </div>
 </section>
-<!-- Footer -->
-<footer class="relative text-gray-200 py-12 md:py-16 bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-900 border-b-4 border-amber-500 text-white shadow-inner overflow-hidden">
-<!-- Subtle Footer Background -->
-<div class="absolute inset-0 pointer-events-none z-0 overflow-hidden">
-<svg class="absolute top-0 right-0 w-[500px] h-[500px] opacity-10 text-amber-500 transform translate-x-1/3 -translate-y-1/3" viewbox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-<path d="M10,100 a90,90 0 1,0 180,0 a90,90 0 1,0 -180,0 M30,100 a70,70 0 1,0 140,0 a70,70 0 1,0 -140,0 M50,100 a50,50 0 1,0 100,0 a50,50 0 1,0 -100,0" fill="none" stroke="currentColor" stroke-width="1.5"/>
-</svg>
-<div class="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-black/20 to-transparent z-0"></div>
-</div>
-<div class="container mx-auto px-4 md:px-6">
-<div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-<!-- Company Info -->
-<div>
-<h4 class="text-white font-bold text-lg mb-4 flex items-center gap-2">
-<div class="w-8 h-8 rounded flex items-center justify-center text-sm font-bold bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-orange-600 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-amber-600">AR</div>
-                            Alpha Recovery
-                        </h4>
-<p class="text-gray-300 text-sm mb-4">
-                            Professional debt recovery services helping businesses recover unpaid invoices.
-                        </p>
-<div class="flex gap-4">
-<a aria-label="Facebook" class="footer-link" href="#">
-<i class="fab fa-facebook-f"></i>
-</a>
-<a aria-label="LinkedIn" class="footer-link" href="#">
-<i class="fab fa-linkedin-in"></i>
-</a>
-<a aria-label="Twitter" class="footer-link" href="#">
-<i class="fab fa-twitter"></i>
-</a>
-</div>
-</div>
-<!-- Quick Links -->
-<div>
-<h5 class="text-white font-bold mb-4">Quick Links</h5>
-<ul class="space-y-2 text-sm">
-<li><a class="footer-link" href="services.html">Services</a></li>
-<li><a class="footer-link" href="how-it-works.html">How It Works</a></li>
-<li><a class="footer-link" href="testimonials.html">Testimonials</a></li>
-<li><a class="footer-link" href="contact.html">Contact</a></li>
-</ul>
-</div>
-<!-- Legal -->
-<div>
-<h5 class="text-white font-bold mb-4">Legal</h5>
-<ul class="space-y-2 text-sm">
-<li><a class="footer-link" href="privacy.html">Privacy Policy</a></li>
-<li><a class="footer-link" href="terms.html">Terms &amp; Conditions</a></li>
-<li><a class="footer-link" href="cookies.html">Cookie Policy</a></li>
-<li><a class="footer-link" href="compliance.html">Compliance</a></li>
-</ul>
-</div>
-<!-- Contact Info -->
-<div>
-<h5 class="text-white font-bold mb-4">Contact Us</h5>
-<ul class="space-y-3 text-sm">
-<li class="flex items-start gap-3">
-<i class="fas fa-map-marker-alt text-amber-500 mt-1 flex-shrink-0"></i>
-<span class="text-gray-300">144 Oxford Road, Rosebank<br/>Johannesburg, 2196<br/>South Africa</span>
-</li>
-<li class="flex items-center gap-3">
-<i class="fas fa-phone text-amber-500 flex-shrink-0"></i>
-<a class="text-gray-300 hover:text-white transition" href="tel:+27614490671">+27 61 449 0671</a>
-</li>
-<li class="flex items-center gap-3">
-<i class="fas fa-envelope text-amber-500 flex-shrink-0"></i>
-<a class="text-gray-300 hover:text-white transition" href="mailto:hello@alpharecovery.co.za">hello@alpharecovery.co.za</a>
-</li>
-</ul>
-</div>
-</div>
-<!-- Divider -->
-<div class="border-t border-neutral-800 pt-8">
-<div class="flex flex-col md:flex-row items-center justify-between">
-<p class="text-gray-400 text-sm mb-4 md:mb-0">
-                            © 2026 Alpha Recovery Solutions. All rights reserved.
-                        </p>
-<div class="flex items-center gap-4 text-sm text-gray-400">
-<div class="flex items-center gap-2">
-<i class="fas fa-certificate text-amber-500"></i>
-<span>FCA Regulated</span>
-</div>
-<div class="flex items-center gap-2">
-<i class="fas fa-certificate text-amber-500"></i>
-<span>ISO 9001 Certified</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-</footer>
 </main>
 <!-- Floating Action Button -->
 <a aria-label="Contact us on WhatsApp" class="floating-cta text-white hover:shadow-lg hover:shadow-amber-500/30 ring-1 ring-amber-500 ring-offset-1 ring-offset-transparent shadow-md bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-orange-600 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-amber-600" href="https://wa.me/27614490671?text=Hello%20Alpha%20Recovery,%20I%20need%20help%20with%20debt%20recovery" rel="noopener noreferrer" target="_blank">
