@@ -50,8 +50,15 @@
 
         /* Mobile menu checkbox state */
         #menu-toggle:checked ~ #mobile-menu {
-            display: block;
+            display: flex;
+            height: 100vh;
         }
+        
+        /* Change icon from bars to X when checked */
+        #menu-toggle:checked ~ nav label .fa-bars:before {
+            content: "\f00d";
+        }
+        
 
         /* Testimonial slider animations */
         @keyframes fadeInOut {
@@ -224,11 +231,11 @@
             </a>
 </nav>
 <!-- Mobile Menu (Hidden by default) -->
-<div class="hidden md:hidden bg-gray-50 border-t border-gray-200 px-4 py-4" id="mobile-menu"><a class="block py-2 nav-link" href="index.html">Home</a>
-<a class="block py-2 nav-link" href="services.html">Services</a>
-<a class="block py-2 nav-link" href="how-it-works.html">How It Works</a>
-<a class="block py-2 nav-link" href="testimonials.html">Testimonials</a>
-<a class="block py-2 nav-link" href="contact.html">Contact</a>
+<div class="hidden md:hidden absolute left-0 w-full bg-white shadow-xl border-b border-gray-200 px-6 py-8 flex flex-col items-center justify-center space-y-6 z-40 transition-all duration-300" id="mobile-menu"><a class="block text-xl font-semibold text-blue-900 hover:text-green-500 py-2" href="index.html">Home</a>
+<a class="block text-xl font-semibold text-blue-900 hover:text-green-500 py-2" href="services.html">Services</a>
+<a class="block text-xl font-semibold text-blue-900 hover:text-green-500 py-2" href="how-it-works.html">How It Works</a>
+<a class="block text-xl font-semibold text-blue-900 hover:text-green-500 py-2" href="testimonials.html">Testimonials</a>
+<a class="block text-xl font-semibold text-blue-900 hover:text-green-500 py-2" href="contact.html">Contact</a>
 <a class="block mt-4 bg-emerald-500 text-white px-4 py-2 rounded-lg font-semibold hover:bg-emerald-600 hover:shadow-lg hover:shadow-emerald-500/30 transition text-center ring-1 ring-emerald-500 ring-offset-1 ring-offset-transparent shadow-md" href="contact.html">
 <i class="fas fa-paper-plane mr-2"></i>Submit a Debt
             </a>
