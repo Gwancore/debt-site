@@ -585,7 +585,21 @@
                 submitBtn.disabled = true;
                 btnText.textContent = 'Submitting...';
 
-                submitTimeout = setTimeout(() => {
+                const formData = new FormData(form);
+                const data = Object.fromEntries(formData.entries());
+
+                fetch('/api/submit-lead', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        companyName: data['company-name'],
+                        email: data['email'],
+                        debtAmount: data['debt-amount'],
+                        message: data['message'] || ''
+                    })
+                })
+                .then(res => res.json())
+                .then(response => {
                     form.style.display = 'none';
                     successMsg.classList.remove('hidden');
                     form.reset();
@@ -597,7 +611,13 @@
                         submitBtn.disabled = false;
                         btnText.textContent = 'Submit Your Debt for Free Assessment';
                     }, CONFIG.FORM_RESET_DELAY);
-                }, CONFIG.FORM_SUBMIT_DELAY);
+                })
+                .catch(err => {
+                    console.error('Error:', err);
+                    alert('There was an issue submitting your request.');
+                    submitBtn.disabled = false;
+                    btnText.textContent = 'Submit Your Debt for Free Assessment';
+                });
             };
 
             form.addEventListener('submit', handleSubmit);
