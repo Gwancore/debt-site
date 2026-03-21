@@ -593,7 +593,11 @@
                         message: data['message'] || ''
                     })
                 })
-                .then(res => res.json())
+                .then(async res => {
+                    const response = await res.json();
+                    if (!res.ok || response.error) throw new Error(response.error || 'Server error');
+                    return response;
+                })
                 .then(response => {
                     form.style.display = 'none';
                     successMsg.classList.remove('hidden');
