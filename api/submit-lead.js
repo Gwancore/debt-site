@@ -10,8 +10,8 @@ export default async function handler(req, res) {
     // AIRTABLE SETUP (CRM)
     const AIRTABLE_API_KEY = process.env.AIRTABLE_API_KEY;
     const AIRTABLE_BASE_ID = process.env.AIRTABLE_BASE_ID;
-    // Set 'Leads' as your default table name in Airtable
-    const AIRTABLE_TABLE_NAME = process.env.AIRTABLE_TABLE_NAME || 'Leads';
+    // Set 'Table 1' as your default table name in Airtable
+    const AIRTABLE_TABLE_NAME = process.env.AIRTABLE_TABLE_NAME || 'Table 1';
 
     if (!AIRTABLE_API_KEY || !AIRTABLE_BASE_ID) {
       console.warn("CRM Credentials missing. Logging lead locally:", data);
