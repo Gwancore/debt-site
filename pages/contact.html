@@ -975,7 +975,7 @@
                 })
                 .catch(err => {
                     console.error('Error:', err);
-                    alert('There was an issue submitting your request.');
+                    alert('Airtable Error: ' + (err.message || err));
                     submitBtn.disabled = false;
                     btnText.textContent = 'Submit Your Debt for Free Assessment';
                 });
