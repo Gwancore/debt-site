@@ -26,6 +26,7 @@ export default async function handler(req, res) {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
+        typecast: true,
         records: [
           {
             fields: {
@@ -41,7 +42,8 @@ export default async function handler(req, res) {
 
     if (!response.ok) {
       const errorData = await response.json();
-      throw new Error(`Airtable Error: ${JSON.stringify(errorData)}`);
+      console.error("Airtable Error:", errorData);
+      return res.status(400).json({ error: JSON.stringify(errorData) });
     }
 
     // Success
@@ -49,6 +51,6 @@ export default async function handler(req, res) {
 
   } catch (error) {
     console.error('Submission Error:', error);
-    return res.status(500).json({ error: 'Failed to process lead submission' });
+    return res.status(500).json({ error: error.message || 'Failed to process lead submission' });
   }
 }
