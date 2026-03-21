@@ -32,9 +32,7 @@ export default async function handler(req, res) {
               "Company Name": data.companyName || "Unknown",
               "Email": data.email || "Unknown",
               "Debt Amount": Number(data.debtAmount) || 0,
-              "Message": data.message || "",
-              "Status": "New Lead",
-              "Date Submitted": new Date().toISOString()
+              "Message": data.message || ""
             }
           }
         ]
